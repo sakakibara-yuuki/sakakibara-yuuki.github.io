@@ -9,7 +9,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - name: Checkout
-    uses: actions/checkout@v3
+      uses: actions/checkout@v3
 
     # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
     # - name: Install pnpm
@@ -28,7 +28,7 @@ jobs:
 
     - name: build
     env:
-      BASE_PATH: '/your-repo-name'
+      BASE_PATH: '/dev'
     run: |
       npm run build
       touch build/.nojekyll
